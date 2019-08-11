@@ -1,7 +1,6 @@
 D:\Project\TDDTrain\GameNumber\bin\Debug\netstandard2.0\GameNumber.deps.json
 D:\Project\TDDTrain\GameNumber\bin\Debug\netstandard2.0\GameNumber.dll
 D:\Project\TDDTrain\GameNumber\bin\Debug\netstandard2.0\GameNumber.pdb
-D:\Project\TDDTrain\GameNumber\obj\Debug\netstandard2.0\GameNumber.csprojAssemblyReference.cache
 D:\Project\TDDTrain\GameNumber\obj\Debug\netstandard2.0\GameNumber.csproj.CoreCompileInputs.cache
 D:\Project\TDDTrain\GameNumber\obj\Debug\netstandard2.0\GameNumber.AssemblyInfoInputs.cache
 D:\Project\TDDTrain\GameNumber\obj\Debug\netstandard2.0\GameNumber.AssemblyInfo.cs

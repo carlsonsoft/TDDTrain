@@ -1,38 +1,32 @@
-﻿using System;
-
-namespace GameNumber
+﻿namespace GameNumber
 {
     public class GameNumber
     {
-        private readonly int _value;
-
-        public GameNumber(int value)
+        private readonly int _position;
+        public GameNumber(int position)
         {
-            this._value = value;
+            this._position = position;
         }
-
         public string Say()
         {
-            if (Divide(3) == 0 && Divide(5) == 0)
+            if (IsSpecialPosition(3) && IsSpecialPosition(5))
             {
                 return "FizzBuzz";
             }
-            if (Divide(3) == 0 || _value.ToString().Contains("3"))
+            if (IsSpecialPosition(3))
             {
                 return "Fizz";
             }
-
-            if (Divide(5) == 0 || _value.ToString().Contains("5"))
+            if (IsSpecialPosition(5))
             {
                 return "Buzz";
             }
-            return _value.ToString();
+            
+            return _position.ToString();
         }
-
-        private int Divide(int v)
+        private bool IsSpecialPosition(int value)
         {
-            return _value % v;
+            return _position % value == 0 || _position.ToString().Contains(value.ToString());
         }
-
     }
 }

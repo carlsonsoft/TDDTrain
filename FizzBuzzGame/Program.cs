@@ -1,5 +1,5 @@
 ﻿using System;
-
+using  GameNumber;
 namespace FizzBuzzGame
 {
     class Program
@@ -10,7 +10,7 @@ namespace FizzBuzzGame
             {
                 var gameNumber = new GameNumber.GameNumber(i);
                 Console.WriteLine(gameNumber.Say());
-            }
+            }   
             Console.ReadKey();
         }
     }

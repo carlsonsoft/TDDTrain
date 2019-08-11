@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29001.49
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameNumber", "GameNumber\GameNumber.csproj", "{46571935-2426-41D6-8810-A10502308197}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameNumber.Tests", "GameNumber.Tests\GameNumber.Tests.csproj", "{E03792AE-CD9B-407A-AEEE-55A024B49031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzGame", "FizzBuzzGame\FizzBuzzGame.csproj", "{148FCF7C-1EE9-400A-831A-F0B2551F3B50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzGame", "FizzBuzzGame\FizzBuzzGame.csproj", "{148FCF7C-1EE9-400A-831A-F0B2551F3B50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FirstTrain", "FirstTrain", "{F6EDDCF9-5BEF-4BF5-9AFC-BD84FC947863}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46571935-2426-41D6-8810-A10502308197} = {F6EDDCF9-5BEF-4BF5-9AFC-BD84FC947863}
+		{E03792AE-CD9B-407A-AEEE-55A024B49031} = {F6EDDCF9-5BEF-4BF5-9AFC-BD84FC947863}
+		{148FCF7C-1EE9-400A-831A-F0B2551F3B50} = {F6EDDCF9-5BEF-4BF5-9AFC-BD84FC947863}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95009767-64A8-455B-8CB3-D1E23DD346D9}

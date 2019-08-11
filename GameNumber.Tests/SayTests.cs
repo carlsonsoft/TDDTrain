@@ -1,37 +1,46 @@
-using System;
 using Xunit;
-using  GameNumber;
+
 namespace GameNumber.Tests
 {
     public class SayTests
     {
-
-        [Fact]
-        public void Should_Say_1_when_Is_1()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(11)]
+        public void At_NormalPosition_ReturnRawPosition(int position)
         {
-            var gameNumber = new GameNumber(1);
-            Assert.Equal("1", gameNumber.Say());
+            Assert.Equal(position.ToString(), CreateGameNumberSay(position));
         }
 
-        [Fact]
-        public void Should_Say_Fizz_when_Is_Divided_By_3()
+        [Theory]
+        [InlineData(3)]
+        [InlineData(13)]
+        public void At_PositionDivided3OrContain3_ReturnFizz(int position)
         {
-            var gameNumber = new GameNumber(3);
-            Assert.Equal("Fizz", gameNumber.Say());
-        }
-        [Fact]
-        public void Should_Say_Buz_when_Is_Divided_By_5()
-        {
-            var gameNumber = new GameNumber(5);
-            Assert.Equal("Buzz", gameNumber.Say());
-        }
-        [Fact]
-        public void Should_Say_FuzzBuz_when_Is_Divided_By_15()
-        {
-            var gameNumber = new GameNumber(15);
-            Assert.Equal("FizzBuzz", gameNumber.Say());
+            Assert.Equal("Fizz", CreateGameNumberSay(position));
         }
 
-        
+        [Theory]
+        [InlineData(5)]
+        [InlineData(52)]
+        [InlineData(56)]
+        public void At_PositionDivided5OrContain5_ReturnBuzz(int position)
+        {
+            Assert.Equal("Buzz", CreateGameNumberSay(position));
+        }
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(45)]
+        public void At_PositionDivided5AndDivided3_ReturnFizzBuzz(int position)
+        {
+            Assert.Equal("FizzBuzz", CreateGameNumberSay(position));
+        }
+
+        private string CreateGameNumberSay(int position)
+        {
+            return new GameNumber(position).Say();
+        }
     }
 }
