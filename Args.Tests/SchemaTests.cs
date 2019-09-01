@@ -1,10 +1,8 @@
-using System;
-using ArgsLib;
 using Xunit;
 
-namespace Args.Tests
+namespace ArgsLib.Tests
 {
-    public class UnitTest1
+    public class SchemaTests
     {
         [InlineData("b","true",true)]
         [InlineData("b", "false", false)]
@@ -36,15 +34,7 @@ namespace Args.Tests
             Schemas schemas = new Schemas("s:string");
             Assert.Equal(excepted, schemas.GetValue(name, value));
         }
-
-        [Fact]
-        public void shold_parse_normal_command()
-        {
-            Schemas schemas = new Schemas("s:string,i:int,b:bool");
-            Praser praser = new Praser("-s /usr/local -b -i 100");
-            Assert.Equal("/usr/local", praser.GetValue("s"));
-            Assert.Equal("true", praser.GetValue("b"));
-        }
+        
     }
 
     
